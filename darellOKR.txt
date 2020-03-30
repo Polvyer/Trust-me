@@ -1,3 +1,4 @@
 Schedule and deliverable:
  - Implement movement and first person camera view -- by Tuesday 10pm (Estimate: few minutes)
  - Implement terminal mechanic where the player can enter commands onto a computer screen -- by Tuesday 10pm (Estimate: few hours)
+ - Implement script for whenever the player enters the right code into said terminal they will proceed through the level. An object can be    spawned, destroyed, path opened up etc -- by Tuesday 10pm (Estimate: 1-2 hours)
