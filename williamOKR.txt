@@ -1,0 +1,6 @@
+Schedule and deliverable:
+	Come up with a list of traps -- Thur by 10pm (estimate: 0.5 hrs)
+	Implement an inventory system -- Fri by 10pm (estimate: 2 hrs)
+	Come up with the script of the main storyline -- Sat by 10pm (estimate: 1.5 hrs)
+	Design the main character in Unity -- Next Fri by 10pm (estimate: 3 hrs)
+	Implement the terminal -- Next Sat by 10pm (estimate: 4 hrs)
