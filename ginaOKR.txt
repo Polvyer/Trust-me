@@ -1,4 +1,4 @@
 Schedule and deliverable:
 	gather a list of sounds -- Mon by 10pm (estimate: 2 hrs)
-	implement a turning lights on/off script -- Tues by 5pm (estimate: 1hr)
-	come up with puzzles that show a secret code -- Wed by 10pm (esitmate: 3 hrs)
+	come up with puzzles that show a secret code -- Tue by 5pm (esitmate: 5 hrs)
+	implement a turning lights on/off script -- Wed by 11pm (estimate: 3hr)
