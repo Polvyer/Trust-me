@@ -64,8 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CreateStairs.cs" />
+    <Compile Include="Assets\Inventory.cs" />
+    <Compile Include="Assets\Item.cs" />
     <Compile Include="Assets\MouseLook.cs" />
+    <Compile Include="Assets\OpenDoor.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
+    <Compile Include="Assets\Slot.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/w.ocampo/Desktop/cs426_Ocampo_William_Asgn6-11/Trust me/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
