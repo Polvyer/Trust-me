@@ -11,6 +11,9 @@ public class Inventory : MonoBehaviour
     private int slots;
     private Transform[] slot;
 
+    private GameObject itemPickedUp;
+    private bool itemAdded;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,12 +46,41 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Item")
+        {
+            itemPickedUp = other.gameObject;
+            AddItem(itemPickedUp);
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Item")
+        {
+            itemAdded = false;
+        }
+    }
+
+    public void AddItem(GameObject item)
+    {
+        for (int i = 0; i < slots; i++)
+        {
+            if (slot[i].GetComponent<Slot>().empty && itemAdded == false)
+            {
+                slot[i].GetComponent<Slot>().item = itemPickedUp;
+                slot[i].GetComponent<Slot>().itemIcon = itemPickedUp.GetComponent<Item>().icon;
+                itemAdded = true;
+            }
+        }
+    }
+
     public void DetectInventorySlots()
     {
         for(int i = 0; i < slots; i++)
         {
             slot[i] = slotHolder.transform.GetChild(i);
-            print(slot[i].name);
         }
     }
 }
