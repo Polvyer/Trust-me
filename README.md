@@ -3,14 +3,16 @@
 Assignment 7
 
 --AI and Mecanim--
-1. Gina used AI/mecanim to create a cat character that walks around the first floor of the house and helps give the player a sense of home.
+1. Gina used AI/mecanim to create a cat character that walks around the first floor of the house and helps give the player a sense of home (since this is the player's home).
    Found a cat model with animations and implemented the slow walk animation. 
    Created a NavMesh for the house and made the cat a navigation agent.
    Added points on the mesh for pathfinding and added them to a list so the cat can walk to them in a random order. 
    Followed the NavMesh tutorial and used code from here: https://docs.unity3d.com/Manual/Navigation.html. 
 2. Darrel
-3. William
-
+3. William used AI/mecanim to create a tiger character that walks around the outside of the house.
+   Found a tiger model with animations and implemented walk/idle animation.
+   Created a NavMesh for the outside floor and made the tiger a navigation agent.
+   Followed the NavMesh tutorial and used code from here: https://docs.unity3d.com/Manual/Navigation.html.
 
 --Physics--
 1. Hinge joints on all the doors of the house. This was mainly used to run the OpeningDoor script. Without it, we would have to rely on animations, which we might come back to if time permits.
@@ -30,4 +32,4 @@ Assignment 7
 --Textures--
 1. Roof tiling
 2. Wooden floor
-3. Stone front porch
+3. Dark Stormy Sky. This ties into the mysterious theme. Cloudiness usually depicts that very well.
