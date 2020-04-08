@@ -13,9 +13,9 @@ Assignment 7
 
 
 --Physics--
-1. Hinge joints on all the doors of the house.
-2. Fog particle system?
-3. Colliders?
+1. Hinge joints on all the doors of the house. This was mainly used to run the OpeningDoor script. Without it, we would have to rely on animations, which we might come back to if time permits.
+2. Fog particle system was implemented in the front of the house. This system will be replicated once we add more to the level. The fog ties into the mysterious theme. The player throughout the level slowly remembers who they are, but initially doesn't. It's a mystery, and as such, a lot of components/effects that we will add/added tie into this theme.
+3. Colliders with "knockable" objects inside of the house. This is mainly to make the house seemingly more realistic.
 
 --Lights--
 1. Directional light outside to immitate the sun/moon. 
