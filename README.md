@@ -23,9 +23,9 @@ Assignment 7
 3. Two different point lights.
 
 --Sounds--
-1. Cricket sound effect to help set the tone of the game
-2. Open door sound effect that is triggered when the character walks through a door.
-3. Stair sound effect occurs when player goes up/down stairs.
+1. Cricket sound effect to help set the tone of the game. Game should be enigmatic and cricket sounds give off that mysterious vibe.
+2. Open door sound effect that is triggered when the character walks through a door. This is a puzzle/exploration game. A lot of small details like an opening door sound are very useful in setting up the environment.
+3. Stair sound effect occurs when player goes up/down stairs. This is the same as with the opening door sound.
 
 --Textures--
 1. Roof tiling
