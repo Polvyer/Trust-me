@@ -15,7 +15,7 @@ Assignment 7
 --Physics--
 1. Hinge joints on all the doors of the house. This was mainly used to run the OpeningDoor script. Without it, we would have to rely on animations, which we might come back to if time permits.
 2. Fog particle system was implemented in the front of the house. This system will be replicated once we add more to the level. The fog ties into the mysterious theme. The player throughout the level slowly remembers who they are, but initially doesn't. It's a mystery, and as such, a lot of components/effects that we will add/added tie into this theme.
-3. Colliders with "knockable" objects inside of the house. This is mainly to make the house seemingly more realistic.
+3. Added torque to the character so the movement slows to a stop rather than going from moving to immediately stopped. This gave the character movement a more realistic feeling. I used this unity AddTorque tutorial as a reference https://learn.unity.com/tutorial/3d-physics?signup=true#5c7f8528edbc2a002053b513.
 
 --Lights--
 1. Directional light outside to immitate the sun/moon. 
