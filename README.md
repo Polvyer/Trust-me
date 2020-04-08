@@ -8,8 +8,7 @@ Assignment 7
    Created a NavMesh for the house and made the cat a navigation agent.
    Added points on the mesh for pathfinding and added them to a list so the cat can walk to them in a random order. 
    Followed the NavMesh tutorial and used code from here: https://docs.unity3d.com/Manual/Navigation.html. 
-2. Darell implemented keypad puzzle in which the player must retrieve a pin from a computer by inputting a command to terminal, then 
-   will be able to input the correct pin into the keypad and unlock a door for future features.
+2. Darrel
 3. William used AI/mecanim to create a tiger character that walks around the outside of the house.
    Found a tiger model with animations and implemented walk/idle animation.
    Created a NavMesh for the outside floor and made the tiger a navigation agent.
@@ -29,7 +28,6 @@ Assignment 7
 1. Cricket sound effect to help set the tone of the game. Game should be enigmatic and cricket sounds give off that mysterious vibe.
 2. Open door sound effect that is triggered when the character walks through a door. This is a puzzle/exploration game. A lot of small details like an opening door sound are very useful in setting up the environment.
 3. Stair sound effect occurs when player goes up/down stairs. This is the same as with the opening door sound.
-4. Keypad makes confirmation noise when key is pressed.
 
 --Textures--
 1. Roof tiling
