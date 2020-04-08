@@ -13,16 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f; // Radius of sphere
     public float jumpHeight = 3f;
 
-    public float torque = 2;
-    public Rigidbody rb;
-
     Vector3 velocity;
     bool isGrounded;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -36,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        rb.AddRelativeForce(Vector3.forward * torque);
 
         Vector3 move = transform.right * x + transform.forward * z;
 
