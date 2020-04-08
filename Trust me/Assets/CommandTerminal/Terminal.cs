@@ -69,9 +69,6 @@ namespace CommandTerminal
         public static CommandHistory History { get; private set; }
         public static CommandAutocomplete Autocomplete { get; private set; }
 
-        public GameObject item; // laptop object
-        public Transform guide; // attach to player
-
         public static bool IssuedError {
             get { return Shell.IssuedErrorMessage != null; }
         }
@@ -168,13 +165,12 @@ namespace CommandTerminal
                 Autocomplete.Register(command.Key);
             }
         }
-        
+
         void OnGUI() {
-            float distance = Vector3.Distance(item.transform.position, guide.transform.position);
-            if (Event.current.Equals(Event.KeyboardEvent(ToggleHotkey)) && distance < 3 ) {
+            if (Event.current.Equals(Event.KeyboardEvent(ToggleHotkey))) {
                 SetState(TerminalState.OpenSmall);
                 initial_open = true;
-            } else if (Event.current.Equals(Event.KeyboardEvent(ToggleFullHotkey)) && distance < 3) {
+            } else if (Event.current.Equals(Event.KeyboardEvent(ToggleFullHotkey))) {
                 SetState(TerminalState.OpenFull);
                 initial_open = true;
             }

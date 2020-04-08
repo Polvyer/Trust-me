@@ -41,8 +41,8 @@ public class Inventory : MonoBehaviour
         else
         {
             inventory.SetActive(false);
-            //Cursor.lockState = CursorLockMode.Locked;
-            //Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 

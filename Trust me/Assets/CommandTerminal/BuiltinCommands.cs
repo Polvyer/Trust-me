@@ -9,13 +9,6 @@ namespace CommandTerminal
         [RegisterCommand(Help = "Does nothing")]
         static void CommandNoop(CommandArg[] args) { }
 
-
-        [RegisterCommand(Help = "what could this be?", MaxArgCount = 0)]// CUSTOM COMMAND 
-        static void CommandDream(CommandArg[] args)
-        {
-            Terminal.Log("PIN:1234");
-        }
-
         [RegisterCommand(Help = "Clears the Command Console", MaxArgCount = 0)]
         static void CommandClear(CommandArg[] args) {
             Terminal.Buffer.Clear();
