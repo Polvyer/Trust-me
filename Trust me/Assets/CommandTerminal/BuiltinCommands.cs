@@ -14,6 +14,12 @@ namespace CommandTerminal
             Terminal.Buffer.Clear();
         }
 
+        [RegisterCommand(Help = "what could this mean?", MaxArgCount = 0)] //CUSTOM COMMAND 
+        static void CommandDream(CommandArg[] args)
+        {
+            Terminal.Log("PIN:1234");
+        }
+
         [RegisterCommand(Help = "Lists all Commands or displays help documentation of a Command", MaxArgCount = 1)]
         static void CommandHelp(CommandArg[] args) {
             if (args.Length == 0) {
