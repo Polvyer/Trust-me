@@ -8,6 +8,8 @@ Assignment 7
    Created a NavMesh for the house and made the cat a navigation agent.
    Added points on the mesh for pathfinding and added them to a list so the cat can walk to them in a random order. 
    Followed the NavMesh tutorial and used code from here: https://docs.unity3d.com/Manual/Navigation.html. 
+2. Darrel
+3. William
 
 
 --Physics--
