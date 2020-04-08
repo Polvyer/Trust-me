@@ -22791,8 +22791,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db15c20421b9fc42ab5550549c88f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
-  timer: 0
+  radius: 100
+  timer: 3
 --- !u!195 &2146821575
 NavMeshAgent:
   m_ObjectHideFlags: 0
