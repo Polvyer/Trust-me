@@ -10,6 +10,9 @@ how you modified the design of your game and why (including UI design and Sound 
 -Changes the text colors in the terminal from highly saturated to pastel colors
 
 
+
+
+
 --SOUND--
 
 -Background cricket noise for outside
