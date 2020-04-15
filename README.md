@@ -8,10 +8,7 @@ how you modified the design of your game and why (including UI design and Sound 
 
 -Added a cheat sheat next to the laptop to help the player interact with it
 -Changes the text colors in the terminal from highly saturated to pastel colors
-
-
-
-
+-Added Post Processing, which enhanced the level design to match the theme of the game. Noticeable shadows in the trees and throughout the world. The colors are more rich and compliment the theme of a dreamy, perfect world. The lighting is harsher, however; it ties very well into the dreamy theme
 
 --SOUND--
 Various different ambient background noise files were used in different parts of the map. These noises help set the eerie tone of the game and make the player feel lonely. Source: https://www.youtube.com/watch?v=8OIlsv6-pYE
