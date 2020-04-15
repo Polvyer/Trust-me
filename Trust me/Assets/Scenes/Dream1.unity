@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 1, g: 1, b: 1, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.008
+  m_FogDensity: 0.013
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.2784314, g: 0.35686275, b: 0.34509805, a: 1}
@@ -3086,26 +3086,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Polaroid (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304553567890095659, guid: dff8a71bcb5726d48b7d4b5a06eb80c3,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1.3388199
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304553567890095659, guid: dff8a71bcb5726d48b7d4b5a06eb80c3,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.16940983
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304553567890095659, guid: dff8a71bcb5726d48b7d4b5a06eb80c3,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 0.09764271
-      objectReference: {fileID: 0}
-    - target: {fileID: 5304553567890095659, guid: dff8a71bcb5726d48b7d4b5a06eb80c3,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 1.1952862
       objectReference: {fileID: 0}
     - target: {fileID: 6223212556963050218, guid: dff8a71bcb5726d48b7d4b5a06eb80c3,
         type: 3}
@@ -14872,6 +14852,7 @@ GameObject:
   - component: {fileID: 1130031181}
   - component: {fileID: 1130031180}
   - component: {fileID: 1130031179}
+  - component: {fileID: 1130031178}
   - component: {fileID: 1130031177}
   - component: {fileID: 1130031176}
   m_Layer: 0
@@ -14895,7 +14876,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2800000, guid: 736e75bd4419a5f49a5673212deec4ea, type: 3}
   type: 
-  itemAdded: 0
 --- !u!65 &1130031177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14908,6 +14888,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1130031178
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130031175}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1130031179
 MeshRenderer:

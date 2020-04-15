@@ -12,7 +12,7 @@ public class Inventory : MonoBehaviour
     private Transform[] slot;
 
     private GameObject itemPickedUp;
-    //private bool itemAdded;
+    private bool itemAdded;
 
     public AudioClip sound;
 
@@ -63,25 +63,23 @@ public class Inventory : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        /* Only run if we want item to be collectible more than once
         if (other.tag == "Item")
         {
-            //itemAdded = false;
+            itemAdded = false;
         }
-        */
     }
 
     public void AddItem(GameObject item)
     {
         for (int i = 0; i < slots; i++)
         {
-            if (slot[i].GetComponent<Slot>().empty && itemPickedUp.GetComponent<Item>().itemAdded == false)
+            if (slot[i].GetComponent<Slot>().empty && itemAdded == false)
             {
                 slot[i].GetComponent<Slot>().item = itemPickedUp;
                 slot[i].GetComponent<Slot>().itemIcon = itemPickedUp.GetComponent<Item>().icon;
-                itemPickedUp.GetComponent<Item>().itemAdded = true;
-                itemPickedUp.GetComponent<BoxCollider>().enabled = false;
+                itemAdded = true;
                 item.GetComponent<Renderer>().enabled = false;
+                //Destroy(item.gameObject);
             }
         }
     }
