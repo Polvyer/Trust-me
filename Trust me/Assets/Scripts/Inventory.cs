@@ -14,6 +14,8 @@ public class Inventory : MonoBehaviour
     private GameObject itemPickedUp;
     private bool itemAdded;
 
+    public AudioClip sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,9 @@ public class Inventory : MonoBehaviour
         DetectInventorySlots();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = sound;
     }
 
     // Update is called once per frame
@@ -52,6 +57,7 @@ public class Inventory : MonoBehaviour
         {
             itemPickedUp = other.gameObject;
             AddItem(itemPickedUp);
+            GetComponent<AudioSource>().Play();
         }
     }
 
@@ -72,6 +78,8 @@ public class Inventory : MonoBehaviour
                 slot[i].GetComponent<Slot>().item = itemPickedUp;
                 slot[i].GetComponent<Slot>().itemIcon = itemPickedUp.GetComponent<Item>().icon;
                 itemAdded = true;
+                item.GetComponent<Renderer>().enabled = false;
+                //Destroy(item.gameObject);
             }
         }
     }
