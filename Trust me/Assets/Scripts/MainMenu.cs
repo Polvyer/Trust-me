@@ -4,20 +4,25 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
+    public Color loadToColor = Color.white;
+    public float fadeSpeed;
 
     public void LoadDream1()
     {
-        SceneManager.LoadScene("Dream1");
+        Initiate.Fade("Dream1", loadToColor, fadeSpeed);
+        //SceneManager.LoadScene("Dream1");
     }
 
     public void LoadStory()
     {
-        SceneManager.LoadScene("Story");
+        Initiate.Fade("Story", loadToColor, fadeSpeed);
+        //SceneManager.LoadScene("Story");
     }
 
     public void LoadCredits()
     {
-        SceneManager.LoadScene("Credits");
+        Initiate.Fade("Credits", loadToColor, fadeSpeed);
+        //SceneManager.LoadScene("Credits");
     }
 
     public void Quit()
