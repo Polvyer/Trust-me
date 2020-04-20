@@ -10,6 +10,16 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Dream1");
     }
 
+    public void LoadStory()
+    {
+        SceneManager.LoadScene("Story");
+    }
+
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void Quit()
     {
         Application.Quit();
