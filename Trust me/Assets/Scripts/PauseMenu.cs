@@ -51,6 +51,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Credits");
+        //Application.Quit();
     }
 }

@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
 
     public void LoadDream1()
     {
+        print("should load dream1");
         Initiate.Fade("Dream1", loadToColor, fadeSpeed);
         //SceneManager.LoadScene("Dream1");
     }

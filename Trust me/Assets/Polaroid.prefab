@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2800000, guid: 5ebcc2363dd665747a802a3b0fe45c84, type: 3}
   type: 
+  itemAdded: 0
 --- !u!82 &5295315247427556648
 AudioSource:
   m_ObjectHideFlags: 0

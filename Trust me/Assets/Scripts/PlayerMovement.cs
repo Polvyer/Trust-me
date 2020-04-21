@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask; // Actual ground
 
     public float speed = 12f;
+    public float runSpeed = 30f;
     public float gravity = -9.81f;
     public float groundDistance = 0.4f; // Radius of sphere
     public float jumpHeight = 3f;
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
+       
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -40,12 +42,22 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        if (Input.GetButtonDown("Run"))
+        {
+            controller.Move(move * runSpeed * Time.deltaTime);
+            print("running");
+        }
+        else
+        {
+            controller.Move(move * speed * Time.deltaTime);
+        }
+        
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+        
 
         velocity.y += gravity * Time.deltaTime;
 

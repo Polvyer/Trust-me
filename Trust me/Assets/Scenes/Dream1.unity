@@ -3095,7 +3095,7 @@ PrefabInstance:
     - target: {fileID: 6223212556963050218, guid: dff8a71bcb5726d48b7d4b5a06eb80c3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.071789
+      value: -8.003
       objectReference: {fileID: 0}
     - target: {fileID: 6223212556963050218, guid: dff8a71bcb5726d48b7d4b5a06eb80c3,
         type: 3}
@@ -10973,7 +10973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750249939}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.15, y: 3.61, z: -22.36}
+  m_LocalPosition: {x: 28.316, y: 3.694, z: -22.36}
   m_LocalScale: {x: 0.1, y: 0.25, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14792,7 +14792,7 @@ PrefabInstance:
     - target: {fileID: 6223212556963050218, guid: dff8a71bcb5726d48b7d4b5a06eb80c3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.864907
+      value: -8.208
       objectReference: {fileID: 0}
     - target: {fileID: 6223212556963050218, guid: dff8a71bcb5726d48b7d4b5a06eb80c3,
         type: 3}
@@ -14876,6 +14876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2800000, guid: 736e75bd4419a5f49a5673212deec4ea, type: 3}
   type: 
+  itemAdded: 0
 --- !u!65 &1130031177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18413,6 +18414,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   speed: 12
+  runSpeed: 30
   gravity: -19.62
   groundDistance: 0.4
   jumpHeight: 3

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: laptop
-  m_Shader: {fileID: 4800000, guid: 3048b63456d514c4c93dba0f700343dc, type: 3}
+  m_Shader: {fileID: 4800000, guid: ec8bbb54bb6db134b9cfa674b3eaf244, type: 3}
   m_ShaderKeywords: _EMISSION _NORMALMAP _SPECGLOSSMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -86,7 +86,9 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Outline: 0.002
     - _Parallax: 0.02
+    - _RimPower: 3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -98,4 +100,6 @@ Material:
     - _ColorG: {r: 1, g: 1, b: 1, a: 1}
     - _ColorR: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0, g: 0.7252593, b: 1, a: 1}
+    - _RimColor: {r: 0.26, g: 0.19, b: 0.16, a: 0}
     - _SpecColor: {r: 0.49264705, g: 0.49264705, b: 0.49264705, a: 1}
