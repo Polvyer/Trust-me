@@ -24,3 +24,22 @@ Lamp switching on/off sound effect was added so the player can hear and see when
 We rejected some ambient noise selections because they were too suspenseful and dramatic for the part of the game we are currently at.
 We rejected the key-in-lock sound effect for the doors because most of the doors are not locked so the player doesn’t need a key.
 *Note: all sounds without sources were gotten from the YouTube Audio Library (https://www.youtube.com/audiolibrary/soundeffects?ar=1586916063028&nv=1)
+
+Assignment 9
+
+Beta Release
+---Shaders--
+Gina: Added a blue diffused outline shader to the polaroids to make them stand out more so the player knows to collect them.
+
+William Added a sun flare to intensify the environment and make it more appealing.
+
+Darell: Added shader to the keypad, making it more noticeable as an interactable object for the player.
+
+--Modifications from Alpha Release--
+Added a title screen and menu 
+Added a “how to play” button that shows the player the controls
+Added a story screen to explain the premise of the game
+Added a credits screen
+Reduced the lighting + fog to make it more UI friendly.
+Implemented a “run” capability so the player can get across the map faster
+Changed the door that opens via keypad into a see through iron bar door.
