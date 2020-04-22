@@ -12,22 +12,56 @@ public class Animal : MonoBehaviour
     private NavMeshAgent agent;
     private float currentTimer;
 
+    private bool idle;
+    public float idleTimer;
+    private float currentIdleTimer;
+
+    private Animation anim;
+
     private void OnEnable()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animation>();
+
         currentTimer = timer;
+        currentIdleTimer = timer;
     }
 
     void Update()
     {
         currentTimer += Time.deltaTime;
+        currentIdleTimer += Time.deltaTime;
 
-        if (currentTimer > timer)
+        if (currentIdleTimer > idleTimer)
+        {
+            StartCoroutine("switchIdle");
+        }
+
+        if (currentTimer > timer && !idle)
         {
             Vector3 newPosition = RandomNavSphere(transform.position, radius, -1);
             agent.SetDestination(newPosition);
             currentTimer = 0;
         }
+
+        if (idle)
+        {
+            anim.CrossFade("idle");
+
+        }
+
+        else
+        {
+            anim.CrossFade("walk");
+        }
+    }
+
+    IEnumerator switchIdle()
+    {
+        idle = true;
+        yield return new WaitForSeconds(3);
+        currentIdleTimer = 0;
+        idle = false;
     }
 
     public static Vector3 RandomNavSphere(Vector3 origin, float distance, int layerMask)
