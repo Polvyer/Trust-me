@@ -28,6 +28,7 @@ We rejected the key-in-lock sound effect for the doors because most of the doors
 Assignment 9
 
 Beta Release
+
 ---Shaders--
 
 Gina: Added a blue diffused outline shader to the polaroids to make them stand out more so the player knows to collect them.
