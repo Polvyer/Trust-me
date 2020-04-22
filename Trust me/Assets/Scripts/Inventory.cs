@@ -23,9 +23,11 @@ public class Inventory : MonoBehaviour
         DetectInventorySlots();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        inventory.SetActive(false);
 
         GetComponent<AudioSource>().playOnAwake = false;
         GetComponent<AudioSource>().clip = sound;
+
     }
 
     // Update is called once per frame
@@ -34,8 +36,22 @@ public class Inventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             inventoryEnabled = !inventoryEnabled;
+
+            if (inventoryEnabled)
+            {
+                inventory.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                inventory.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
 
+        /*
         if (inventoryEnabled)
         {
             inventory.SetActive(true);
@@ -48,6 +64,7 @@ public class Inventory : MonoBehaviour
             //Cursor.lockState = CursorLockMode.Locked;
             //Cursor.visible = false;
         }
+        */
     }
 
     public void OnTriggerEnter(Collider other)

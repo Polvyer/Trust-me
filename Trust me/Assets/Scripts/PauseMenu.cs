@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject firstPersonCam;
 
     void Start()
     {
