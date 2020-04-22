@@ -29,17 +29,28 @@ Assignment 9
 
 Beta Release
 ---Shaders--
+
 Gina: Added a blue diffused outline shader to the polaroids to make them stand out more so the player knows to collect them.
+
 
 William Added a sun flare to intensify the environment and make it more appealing.
 
+
 Darell: Added shader to the keypad, making it more noticeable as an interactable object for the player.
 
+
 --Modifications from Alpha Release--
-Added a title screen and menu 
-Added a “how to play” button that shows the player the controls
-Added a story screen to explain the premise of the game
-Added a credits screen
-Reduced the lighting + fog to make it more UI friendly.
-Implemented a “run” capability so the player can get across the map faster
-Changed the door that opens via keypad into a see through iron bar door.
+
+- Added a title screen and menu
+
+- Added a “how to play” button that shows the player the controls
+
+- Added a story screen to explain the premise of the game
+
+- Added a credits screen
+
+- Reduced the lighting + fog to make it more UI friendly
+
+- Implemented a “run” capability so the player can get across the map faster
+
+- Changed the door that opens via keypad into a see through iron bar door.
