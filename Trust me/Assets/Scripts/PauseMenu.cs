@@ -32,6 +32,9 @@ public class PauseMenu : MonoBehaviour
     {
         // Resume time and hide the pause menu UI
         pauseMenuUI.SetActive(false);
+        firstPersonCam.GetComponent<MouseLook>().enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Time.timeScale = 1;
         isPaused = false;
     }
@@ -40,6 +43,9 @@ public class PauseMenu : MonoBehaviour
     {
         // Freeze time and bring up pause menu UI
         pauseMenuUI.SetActive(true);
+        firstPersonCam.GetComponent<MouseLook>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         Time.timeScale = 0f;
         isPaused = true;
     }
