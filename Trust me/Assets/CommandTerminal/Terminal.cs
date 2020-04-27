@@ -5,6 +5,7 @@ using UnityEngine.Assertions;
 
 namespace CommandTerminal
 {
+    
     public enum TerminalState
     {
         Close,
@@ -63,6 +64,8 @@ namespace CommandTerminal
         GUIStyle window_style;
         GUIStyle label_style;
         GUIStyle input_style;
+
+        public AudioClip sound;
 
         public static CommandLog Buffer { get; private set; }
         public static CommandShell Shell { get; private set; }
@@ -175,6 +178,9 @@ namespace CommandTerminal
             SetupWindow();
             SetupInput();
             SetupLabels();
+
+            GetComponent<AudioSource>().playOnAwake = false;
+            GetComponent<AudioSource>().clip = sound;
 
             Shell.RegisterCommands();
 

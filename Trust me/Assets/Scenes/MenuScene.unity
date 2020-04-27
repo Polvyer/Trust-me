@@ -672,7 +672,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Controls:\nWASD - move\nf - Open terminal \ni - Open inventory\n"
+  m_Text: "Controls:\nWASD - move\nf - Open laptop terminal \ni - Open inventory\ne
+    - Interact with other objects"
 --- !u!222 &378189291
 CanvasRenderer:
   m_ObjectHideFlags: 0

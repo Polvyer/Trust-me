@@ -9,12 +9,14 @@ public class Keypad : MonoBehaviour
     public CanvasGroup canvasGroup;
     private bool state = false;
     private string input = ""; // player input
-    public string keypadPin = "1234";
+    public string keypadPin = "3124";
     public bool unlockDoor = false;
 
     public GameObject item; // player character
     public Transform guide; // keypad cube
     public GameObject firstPersonCam;
+
+    public AudioClip sound;
 
     public Button button0, button1, button2, button3, button4, button5, button6, button7, button8, button9, buttonClear, buttonAccept;
     private float distance = 0f;
@@ -34,6 +36,10 @@ public class Keypad : MonoBehaviour
         button9.onClick.AddListener(buttonClick9);
         buttonAccept.onClick.AddListener(buttonClickAccept);
         buttonClear.onClick.AddListener(buttonClickClear);
+
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = sound;
+
     }
     // Update is called once per frame
     void Update()
@@ -42,10 +48,9 @@ public class Keypad : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             distance = Vector3.Distance(item.transform.position, guide.transform.position);
-            print(distance);
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && state == false && distance < 20)
+        if (Input.GetKeyDown(KeyCode.E) && state == false && distance < 5)
         {
 
             firstPersonCam.GetComponent<MouseLook>().enabled = false;
@@ -56,7 +61,7 @@ public class Keypad : MonoBehaviour
             state = true;
 
         }
-        else if (Input.GetKeyDown(KeyCode.E) || distance > 20)
+        else if (Input.GetKeyDown(KeyCode.E) || distance > 5)
         {
             firstPersonCam.GetComponent<MouseLook>().enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
@@ -129,8 +134,11 @@ public class Keypad : MonoBehaviour
         if (input == keypadPin)
         {
             unlockDoor = true;
+            GetComponent<AudioSource>().Play();
+            Hide();
             Debug.Log("Correct pin entered");
         }
+        input = "";
     }
 
 }

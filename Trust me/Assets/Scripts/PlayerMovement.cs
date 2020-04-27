@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Run"))
         {
             controller.Move(move * runSpeed * Time.deltaTime);
-            print("running");
         }
         else
         {

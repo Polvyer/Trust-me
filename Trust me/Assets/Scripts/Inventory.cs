@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -13,17 +14,23 @@ public class Inventory : MonoBehaviour
 
     private GameObject itemPickedUp;
 
+    public int polaroidCount;
     public AudioClip sound;
+    public GameObject MemoriesUI;
+    public GameObject firstPersonCam;
+    float timeLeft = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        polaroidCount = 0;
         slots = slotHolder.transform.childCount;
         slot = new Transform[slots];
         DetectInventorySlots();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         inventory.SetActive(false);
+        MemoriesUI.SetActive(false);
 
         GetComponent<AudioSource>().playOnAwake = false;
         GetComponent<AudioSource>().clip = sound;
@@ -33,6 +40,7 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeLeft -= Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.I))
         {
             inventoryEnabled = !inventoryEnabled;
@@ -74,6 +82,11 @@ public class Inventory : MonoBehaviour
             itemPickedUp = other.gameObject;
             AddItem(itemPickedUp);
             GetComponent<AudioSource>().Play();
+            polaroidCount++;
+            if (polaroidCount == 5)
+            {
+                ShowMemories();
+            }
         }
     }
 
@@ -107,6 +120,27 @@ public class Inventory : MonoBehaviour
         for(int i = 0; i < slots; i++)
         {
             slot[i] = slotHolder.transform.GetChild(i);
+        }
+    }
+
+    void ShowMemories()
+    {
+        timeLeft = 5;
+        // Freeze time and bring up pause menu UI
+        MemoriesUI.SetActive(true);
+        firstPersonCam.GetComponent<MouseLook>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
+
+        //resume
+        if (timeLeft <= 0.0f)
+        {
+            MemoriesUI.SetActive(false);
+            firstPersonCam.GetComponent<MouseLook>().enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1;
         }
     }
 }

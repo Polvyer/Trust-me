@@ -8,7 +8,7 @@ public class Breakable : MonoBehaviour {
 	public GameObject shards;
 	public int resistance;
 
-	AudioSource audio;
+	public AudioSource audio;
 
 	public AudioClip collide;
 
