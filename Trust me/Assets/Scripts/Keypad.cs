@@ -135,8 +135,14 @@ public class Keypad : MonoBehaviour
         {
             unlockDoor = true;
             GetComponent<AudioSource>().Play();
+
+            firstPersonCam.GetComponent<MouseLook>().enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             Hide();
-            Debug.Log("Correct pin entered");
+            input = "";
+            state = false;
+            // Debug.Log("Correct pin entered");
         }
         input = "";
     }
