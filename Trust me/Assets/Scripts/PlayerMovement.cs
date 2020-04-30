@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float groundDistance = 0.4f; // Radius of sphere
     public float jumpHeight = 3f;
+    public bool frozen = true;
 
     //public float torque = 2;
     //public Rigidbody rb;
@@ -28,39 +29,41 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if (!frozen) { 
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2f;
-        }
+            if (isGrounded && velocity.y < 0)
+            {
+                velocity.y = -2f;
+            }
        
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        //rb.AddRelativeForce(Vector3.forward * torque);
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+            //rb.AddRelativeForce(Vector3.forward * torque);
 
-        Vector3 move = transform.right * x + transform.forward * z;
+            Vector3 move = transform.right * x + transform.forward * z;
 
-        if (Input.GetButtonDown("Run"))
-        {
-            controller.Move(move * runSpeed * Time.deltaTime);
-        }
-        else
-        {
-            controller.Move(move * speed * Time.deltaTime);
-        }
+            if (Input.GetButtonDown("Run"))
+            {
+                controller.Move(move * runSpeed * Time.deltaTime);
+            }
+            else
+            {
+                controller.Move(move * speed * Time.deltaTime);
+            }
         
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
+            if (Input.GetButtonDown("Jump") && isGrounded)
+            {
+                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            }
         
 
-        velocity.y += gravity * Time.deltaTime;
+            velocity.y += gravity * Time.deltaTime;
 
-        controller.Move(velocity * Time.deltaTime);
+            controller.Move(velocity * Time.deltaTime);
+        }
         
     }
 }
